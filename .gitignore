@@ -1,0 +1,70 @@
+# ===============================
+# 🧠 GENZTYPE PROJECT GITIGNORE
+# ===============================
+
+# ---- Streamlit ----
+# Don't upload secrets or cache
+.streamlit/secrets.toml
+.streamlit/config.toml
+.streamlit/credentials.toml
+.streamlit/**/__pycache__/
+
+# ---- Model files ----
+genz-slang-causal-model-final/
+*.bin
+*.pt
+*.safetensors
+*.h5
+*.onnx
+*.pb
+
+# ---- Tokenizers and checkpoints ----
+*.pickle
+*.pkl
+*.npz
+*.jsonl
+*.ckpt
+*.log
+
+# ---- Datasets ----
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.json
+
+# ---- Training notebooks ----
+*.ipynb
+*.ipynb_checkpoints/
+
+# ---- Python bytecode ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ---- System and IDE files ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env
+*.env
+*.bak
+*.tmp
+*.swp
+
+# ---- Hugging Face Cache ----
+~/.cache/huggingface/
+huggingface/
+*.lock
+
+# ---- Other temporary or test files ----
+logs/
+outputs/
+wandb/
+*.old
+*.zip
+*.tar
+*.tar.gz
+*.rar
