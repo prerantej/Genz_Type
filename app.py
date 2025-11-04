@@ -10,6 +10,14 @@ st.set_page_config(page_title="GenZ-Type ", page_icon="🔥", layout="centered")
 # -------------------- CUSTOM CSS --------------------
 st.markdown("""
 <style>
+            /* Hide top-right GitHub button */
+    [data-testid="stToolbar"] {
+        display: none !important;
+    }
+    /* Optional: also hide deploy/share menu if you want a cleaner look */
+    [data-testid="stDecoration"] {
+        display: none !important;
+    }
 html, body, [data-testid="stAppViewContainer"], .stApp {
     height: 100%;
     width: 100%;
