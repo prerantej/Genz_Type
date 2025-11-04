@@ -1,7 +1,7 @@
 import streamlit as st
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from utils.gemini_helper import generate_with_gemini
+from utils.helper import generate
 import re
 
 # -------------------- PAGE CONFIG --------------------
@@ -135,9 +135,9 @@ if st.button("✨ Generate Suggestions"):
 
         # ---- Gemini generation ----
         try:
-            gemini_suggestion = generate_with_gemini(user_input, top_k=1)
-            if gemini_suggestion and not re.match(r"^[\W_]+$", gemini_suggestion):
-                suggestions.append(gemini_suggestion)
+            gsuggestion = generate(user_input, top_k=1)
+            if gsuggestion and not re.match(r"^[\W_]+$", gsuggestion):
+                suggestions.append(gsuggestion)
         except Exception as e:
             st.error(f"Gemini error: {e}")
 

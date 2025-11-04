@@ -2,9 +2,9 @@ import google.generativeai as genai
 import streamlit as st
 import re
 
-def generate_with_gemini(prompt, top_k=1):
+def generate(prompt, top_k=1):
     # Configure Gemini
-    genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+    genai.configure(api_key=st.secrets["GKEY"])
 
     # Use the latest stable model
     model = genai.GenerativeModel("gemini-2.5-flash")
